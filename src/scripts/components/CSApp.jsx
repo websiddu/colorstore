@@ -7,7 +7,7 @@
 var React = require('react/addons');
 var ReactTransitionGroup = React.addons.TransitionGroup;
 //var Header = React.addons.Header;
-var Header = require('Header');
+var Header = require('../../scripts/components/Header');
 
 // Export React so the devtools can find it
 (window !== window.top ? window.top : window).React = React;

@@ -1,9 +1,5 @@
-.Header{
-
-}
-
 header {
-  height: 75px;
+  height: 64px;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,3 +7,26 @@ header {
   background-color: #31485b;
 }
 
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.colorbar {
+  position: fixed;
+  height: 4px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff url("../images/colorbar.png") repeat-x left top;
+}
+
+.logo {
+  line-height: 64px;
+  display: inline-block;
+}
+
+.logo img {
+  vertical-align: middle;
+  line-height: 64px;
+}
