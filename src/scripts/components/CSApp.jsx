@@ -18,6 +18,30 @@ require("../../styles/main.less");
 //require('../../styles/normalize.css');
 //require('../../styles/main.css');
 
+var MY_PACKS = [
+  {
+    packName: 'Blaze',
+    colors: [
+      {
+        hex: "#9dc432"
+      },
+      {
+        hex: "#f6b829"
+      },
+      {
+        hex: "#e04e3e"
+      },
+      {
+        hex: "#bf4679"
+      }
+    ]
+  }
+];
+
+var packs = MY_PACKS.map(function(pack){
+  return <Pack pack={pack}></Pack>
+});
+
 var CSApp = React.createClass({
   render: function() {
     return (
@@ -25,8 +49,7 @@ var CSApp = React.createClass({
         <ReactTransitionGroup transitionName="fade">
           <Header></Header>
           <div className="container-fluid content">
-            <Pack></Pack>
-            <Pack></Pack>
+            {packs}
           </div>
         </ReactTransitionGroup>
       </div>

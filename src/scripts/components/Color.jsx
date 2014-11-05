@@ -8,14 +8,18 @@ var React = require('react/addons');
 
 var Color = React.createClass({
   render: function () {
+    var color = this.props.color;
+    var styles = {
+      backgroundColor: color.hex
+    }
     return (
-        <div className="col-md-2 col-lg-2 col-sm-4 col-xs-6">
-          <div className="color">
-            <div className="color-stip"></div>
-            <div className="color-code">{"#efefef"}</div>
-          </div>
+      <div className="color-wrap">
+        <div className="color">
+          <div className="color-stip" style={styles}></div>
+          <div className="color-code">{color.hex.toUpperCase()}</div>
         </div>
-      );
+      </div>
+    );
   }
 });
 
