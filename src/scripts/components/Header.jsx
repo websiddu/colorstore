@@ -10,13 +10,13 @@ var React = require('react/addons');
 var Header = React.createClass({
   render: function () {
     return (
-        <header>
-          <div className="colorbar"></div>
-          <div className="content">
-            <a href="/" className="logo"><img src={"images/logo.svg"}></img></a>
-          </div>
-        </header>
-      );
+      <header>
+        <div className="colorbar"></div>
+        <div className="container-fluid">
+          <a href="/" className="logo"><img src={"images/logo.svg"}></img></a>
+        </div>
+      </header>
+    );
   }
 });
 
