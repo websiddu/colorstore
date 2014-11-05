@@ -6,6 +6,8 @@
 
 var React = require('react/addons');
 var ReactTransitionGroup = React.addons.TransitionGroup;
+//var Header = React.addons.Header;
+var Header = require('Header');
 
 // Export React so the devtools can find it
 (window !== window.top ? window.top : window).React = React;
@@ -14,19 +16,16 @@ var ReactTransitionGroup = React.addons.TransitionGroup;
 require('../../styles/normalize.css');
 require('../../styles/main.css');
 
-var imageURL = require('../../images/yeoman.png');
-
-var MycolorsApp = React.createClass({
+var CSApp = React.createClass({
   render: function() {
     return (
       <div className='main'>
         <ReactTransitionGroup transitionName="fade">
-          <img src={imageURL} />
-          <p> "I am dooing great..."</p>
+          <Header></Header>
         </ReactTransitionGroup>
       </div>
     );
   }
 });
 
-module.exports = MycolorsApp;
+module.exports = CSApp;
