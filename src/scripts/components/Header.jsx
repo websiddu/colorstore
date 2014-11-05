@@ -5,7 +5,7 @@
 'use strict';
 
 var React = require('react/addons');
-require('../../styles/Header.css');
+// require('../../styles/Header.css');
 
 var Header = React.createClass({
   render: function () {
@@ -13,7 +13,7 @@ var Header = React.createClass({
         <header>
           <div className="colorbar"></div>
           <div className="content">
-            <a href="/" className="logo"><img src="images/logo.svg" /></a>
+            <a href="/" className="logo"><img src={"images/logo.svg"}></img></a>
           </div>
         </header>
       );

@@ -10,8 +10,10 @@
   "mainInput": "main",
   "mainOutput": "main",
   "dependencies": {
-    "react-router": "^0.7.0",
-    "react": "~0.11.2"
+    "less": "^1.7.5",
+    "less-loader": "^0.7.7",
+    "react": "~0.11.2",
+    "react-router": "^0.7.0"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
@@ -23,6 +25,7 @@
     "style-loader": "~0.8.0",
     "url-loader": "~0.5.5",
     "css-loader": "~0.9.0",
+    "less-loader": "*",
     "karma-script-launcher": "~0.1.0",
     "karma-chrome-launcher": "~0.1.4",
     "karma-firefox-launcher": "~0.1.3",

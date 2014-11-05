@@ -43,8 +43,8 @@ module.exports = {
       test: /\.jsx$/,
       loader: 'react-hot!jsx-loader?harmony'
     }, {
-      test: /\.css$/,
-      loader: 'style-loader!css-loader'
+      test: /\.less$/,
+      loader: 'style-loader!css-loader!less-loader'
     }, {
       test: /\.(png|jpg)$/,
       loader: 'url-loader?limit=8192'

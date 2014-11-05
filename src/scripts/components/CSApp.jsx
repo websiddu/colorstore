@@ -13,8 +13,9 @@ var Header = require('../../scripts/components/Header');
 (window !== window.top ? window.top : window).React = React;
 
 // CSS
-require('../../styles/normalize.css');
-require('../../styles/main.css');
+require("../../styles/main.less");
+//require('../../styles/normalize.css');
+//require('../../styles/main.css');
 
 var CSApp = React.createClass({
   render: function() {
