@@ -5,13 +5,15 @@
 'use strict';
 
 var React = require('react/addons');
-require('../../styles/Color.css');
 
 var Color = React.createClass({
   render: function () {
     return (
-        <div>
-          <p>Content for Color</p>
+        <div className="col-md-2 col-lg-2 col-sm-4 col-xs-6">
+          <div className="color">
+            <div className="color-stip"></div>
+            <div className="color-code">{"#efefef"}</div>
+          </div>
         </div>
       );
   }

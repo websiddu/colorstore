@@ -8,6 +8,7 @@ var React = require('react/addons');
 var ReactTransitionGroup = React.addons.TransitionGroup;
 //var Header = React.addons.Header;
 var Header = require('../../scripts/components/Header');
+var Pack = require('../../scripts/components/Pack');
 
 // Export React so the devtools can find it
 (window !== window.top ? window.top : window).React = React;
@@ -23,6 +24,10 @@ var CSApp = React.createClass({
       <div className='main'>
         <ReactTransitionGroup transitionName="fade">
           <Header></Header>
+          <div className="container-fluid content">
+            <Pack></Pack>
+            <Pack></Pack>
+          </div>
         </ReactTransitionGroup>
       </div>
     );
