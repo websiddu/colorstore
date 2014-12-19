@@ -31,6 +31,47 @@
   color: #43434a;
 }
 
+.color-wrap.add-new-color span {
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 150px;
+  text-align: center;
+  display: block;
+  color: #ddd;
+  transition: all 0.2s ease-in;
+}
+
+.color-wrap.add-new-color {
+  .color-stip, .color-code {
+    display: none;
+  }
+}
+
+.color-wrap {
+  span {
+    display: none;
+  }
+  .color-code {
+    input {
+      width: 100%;
+      padding: 0 11px;
+      box-sizing: content-box;
+      margin-left: -11px;
+      border: 0;
+      height: 40px;
+    }
+  }
+}
+
+.add-new-color .color:hover {
+  box-shadow: 0 0 5px #d5d5d5;
+  cursor: pointer;
+}
+
+.add-new-color .color:hover span {
+  color: #bbb;
+}
+
 .pack {
   margin-bottom: 20px;
 }

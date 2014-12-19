@@ -38,18 +38,22 @@ var MY_PACKS = [
   }
 ];
 
-var packs = MY_PACKS.map(function(pack){
-  return <Pack pack={pack}></Pack>
-});
-
 var CSApp = React.createClass({
+  getInitialState: function() {
+    var packs = MY_PACKS.map(function(pack){
+      return <Pack pack={pack}></Pack>
+    });
+    return {
+      packs: packs
+    }
+  },
   render: function() {
     return (
       <div className='main'>
         <ReactTransitionGroup transitionName="fade">
           <Header></Header>
           <div className="container-fluid content">
-            {packs}
+            {this.state.packs}
           </div>
         </ReactTransitionGroup>
       </div>
