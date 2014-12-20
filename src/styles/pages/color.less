@@ -29,6 +29,9 @@
   font-size: 19px;
   font-weight: 300;
   color: #43434a;
+  input {
+    display: none;
+  }
 }
 
 .color-wrap.add-new-color span {
@@ -41,18 +44,15 @@
   transition: all 0.2s ease-in;
 }
 
-.color-wrap.add-new-color {
-  .color-stip, .color-code {
-    display: none;
-  }
-}
 
-.color-wrap {
-  span {
-    display: none;
-  }
+
+.color-wrap.edit {
   .color-code {
+    span {
+      display: none;
+    }
     input {
+      display: block;
       width: 100%;
       padding: 0 11px;
       box-sizing: content-box;
