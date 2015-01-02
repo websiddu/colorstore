@@ -82,13 +82,26 @@ var CSApp = React.createClass({
         <ReactTransitionGroup transitionName="fade">
           <Header></Header>
           <div className="container-fluid content">
-            {this.state.packs}
-          </div>
-          <div className="container-fluid content">
-            <input type="text" ref="packName"  />
-            <br />
-            <br />
-            <button className="btn btn-sm btn-success" onClick={this.addNewPack}>Add new pack</button>
+
+            <div className="row-fluid">
+              <div className="col-lg-4 col-sm-6">
+                <div className="new-pack-form">
+                  <h4 className="form-title">Add new pack</h4>
+                  <div className="input-group">
+                    <input type="text" className="form-control" placeholder="Name your pack!" ref="packName" />
+                    <span className="input-group-btn">
+                    <button className="btn btn-success" type="button" onClick={this.addNewPack}>Add!</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-8 col-sm-6">  </div>
+            </div>
+            <div className="row-fluid">
+              <div className="col-lg-12 col-sm-12">
+                {this.state.packs}
+              </div>
+            </div>
           </div>
         </ReactTransitionGroup>
       </div>

@@ -51,6 +51,18 @@ var Pack = React.createClass({
     //var updatedPack = this.state.pack;
     //this.setState({pack: updatedPack});
   },
+
+  onRemoveColor: function(colorKey){
+    var fb = new Firebase('https://colostore.firebaseio.com/packs/')
+      .child(this.props.pack.key)
+      .child('colors')
+      .child(colorKey);
+    fb.remove();
+    delete this.state.pack.colors[colorKey]
+    this.setState({
+      pack: this.state.pack
+    });
+  },
   render: function () {
     var thisPack = this.props.pack;
     var showFormStyles = !this.state.formDisplayed ? "color-wrap add-new-color" : "color-wrap"
@@ -59,7 +71,7 @@ var Pack = React.createClass({
 
     for(var key in thisPack.colors) {
       thisPack.colors[key].key = key;
-      packColors.push(<Color color={thisPack.colors[key]} packKey={thisPack.key}></Color>)
+      packColors.push(<Color color={thisPack.colors[key]} packKey={thisPack.key} onRemoveColor={this.onRemoveColor}></Color>)
     }
 
     return (

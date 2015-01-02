@@ -13,15 +13,17 @@
   overflow: hidden;
   max-width: 190px;
   transition: all 0.2s ease-in;
+  position: relative;
+  user-select: none;
 }
 
 .color:hover {
-  box-shadow: 0 0 15px #ccc;
+  box-shadow: 0 0 10px #ccc;
 }
 
 .color-stip {
   height: 85px;
-  background: tomato;
+  background: #fff;
 }
 
 .color-code {
@@ -58,8 +60,30 @@
       box-sizing: content-box;
       margin-left: -11px;
       border: 0;
-      height: 40px;
+      height: 32px;
     }
+  }
+}
+
+.color-actions {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  color: #888;
+  font-size: 13px;
+  display: none;
+  em {
+    cursor: pointer;
+  }
+}
+
+.color-edit {
+  margin-right: 10px;
+}
+
+.color:hover {
+  .color-actions {
+    display: block;
   }
 }
 
