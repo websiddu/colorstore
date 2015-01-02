@@ -16,8 +16,6 @@ var Pack = require('../../scripts/components/Pack');
 
 // CSS
 require("../../styles/main.less");
-//require('../../styles/normalize.css');
-//require('../../styles/main.css');
 
 var CSApp = React.createClass({
   loadData: function() {
@@ -58,7 +56,6 @@ var CSApp = React.createClass({
       colors: {}
     }
 
-
     this.state.packs.push(newPack)
 
     var updatedPacks = this.state.packs;
@@ -82,7 +79,6 @@ var CSApp = React.createClass({
         <ReactTransitionGroup transitionName="fade">
           <Header></Header>
           <div className="container-fluid content">
-
             <div className="row-fluid">
               <div className="col-lg-4 col-sm-6">
                 <div className="new-pack-form">
