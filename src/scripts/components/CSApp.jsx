@@ -9,6 +9,7 @@ var Firebase = require('firebase');
 var ReactTransitionGroup = React.addons.TransitionGroup;
 //var Header = React.addons.Header;
 var Header = require('../../scripts/components/Header');
+var Footer = require('../../scripts/components/Footer');
 var Pack = require('../../scripts/components/Pack');
 
 // Export React so the devtools can find it
@@ -99,6 +100,7 @@ var CSApp = React.createClass({
               </div>
             </div>
           </div>
+          <Footer></Footer>
         </ReactTransitionGroup>
       </div>
     );
