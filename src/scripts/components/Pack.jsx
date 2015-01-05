@@ -77,13 +77,13 @@ var Pack = React.createClass({
     return (
         <div className="pack">
           <h3 className='pack-heading'> {thisPack.packName} </h3>
-          <div className="row">
+              <div className="pack-colors">
             {packColors}
             <div className={showFormStyles}>
               <div className="color">
                 <span onClick={this.addNewColor}>{"+"}</span>
               </div>
-            </div>
+              </div>
           </div>
         </div>
       );
